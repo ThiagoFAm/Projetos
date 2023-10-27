@@ -1,45 +1,55 @@
-# Computador Primitivo - Somador de 2Bits (Link do Projeto final com a simulação e código no fim da página)
-> Os computadores antigamentes eram calculadoras binárias poderosíssimas, como o ENIAC ou IAS. Que formam boa base da computação como conhecemos hoje em dia
+# Projeto de Somador de 2 Bits com Arduino
 
 ## Componentes
 
-1 - Arduino Uno R3  
-7 - Led Vermelho  
-7 - Resistores de 220 Ohms  
-4 - Botões   
-4 - Resistores de 10KOhms 
+- Arduino Uno R3
+- 7 LEDs Vermelhos
+- 7 Resistores de 220 Ohms
+- 4 Botões
+- 4 Resistores de 10K Ohms
 
-## Como funcionará o projeto?
+## Introdução
 
-Basicamente teremos um botão que ditará os estados dos leds, e através dos estados dos leds formaremos nossos números binários. Nesse projeto os botões
-são entradas e os leds saídas. 4 leds serão usados para realizarmos a soma, sendo 2 designados um número e outros 2 outro número.  
-  
-Exemplo: (led1 led2) + (led3 + led4) = (ledBitExcedente, ledBit2, ledBit1) -----> 0 1 + 0 1 = 0 1 0  
-                  
->OBS: 0 == desligado e 1 == Ligado.
+Neste projeto, criaremos um somador de 2 bits usando um Arduino Uno R3. Utilizaremos botões como entradas e LEDs como saídas para representar números binários. O objetivo é somar dois números de 2 bits e exibir o resultado nos LEDs. Este projeto é uma ótima introdução para iniciantes em programação e eletrônica.
 
-Aqui deixarei um exemplo de como funciona a parte da interação do botão com os leds que são utilizados na soma (Tanto o código em C++, como também a forma como
-os componentes devem estar ligados): https://www.tinkercad.com/things/luGK2g44Wpx  
+## Funcionamento
 
->OBS: As portas I/O usadas no Arduino UNO R3 não importam por hora, e entenda como funciona o código.
+O projeto é baseado na interação entre botões e LEDs. Cada botão representa um bit, e cada LED também representa um bit. Ao pressionar os botões, formamos números binários com base nos estados dos LEDs, realizando a soma de bits.
 
-### Somador de 2bits
+## Montagem do Circuito
 
-A ligação dos componentes com as portas digitais do arduino são as seguintes (Quanto a maneira de ligar cada componente no positivo e negativo você pode ver no link que está acima ou no link que deixarei no final deste README.md que é o link do projeto final):  
+### Conexões do Arduino
 
-botões = 12, 10, 8, 6.  
-leds da soma = 13, 11, 9, 7.  
-leds do resultado = 5, 4, 3.  
+- Botões:
+  - Botão 1: Conectado à porta digital 12 do Arduino.
+  - Botão 2: Conectado à porta digital 10 do Arduino.
+  - Botão 3: Conectado à porta digital 8 do Arduino.
+  - Botão 4: Conectado à porta digital 6 do Arduino.
 
-LINK DO PROJETO FINAL: https://www.tinkercad.com/things/iBgTi3ulpCg
+- LEDs da Soma:
+  - LED 1: Conectado à porta digital 13 do Arduino.
+  - LED 2: Conectado à porta digital 11 do Arduino.
+  - LED 3: Conectado à porta digital 9 do Arduino.
+  - LED 4: Conectado à porta digital 7 do Arduino.
 
-Este trabalho está bem primitivo por que há várias maneiras de o fazê-lo, porém sou bem iniciante na linguagem C++. Ao abrir o link do projeto final(Ao fim da página) você verá que
-o tamanho do código está bem grande, mas não se assuste. O código apenas se repete várias vezes, e o que muda? Apenas as portas digitais nas quais os componentes estáo ligados
-isso poderia ter sido resolvido com um "for", porém este trabalho ainda é o primeiro de muitos e ainda está bem raso.
+- LEDs do Resultado:
+  - LED de Bit Excedente: Conectado à porta digital 5 do Arduino.
+  - LED de Bit 2: Conectado à porta digital 4 do Arduino.
+  - LED de Bit 1: Conectado à porta digital 3 do Arduino.
 
-Se tiver alguma dúvida de como este trabalho funciona manda-me uma mensagem:  
--> Instagram = https://www.instagram.com/_thfa._/  
--> Email = thiagoamaraldv@gmail.com ou thiagofamaral@icloud.com
+Certifique-se de conectar os componentes conforme as conexões listadas acima para garantir o funcionamento adequado do projeto.
 
-Thiago Amaral 🍕
+## Código Fonte
 
+O código fonte para este projeto está disponível [aqui no GitHub](https://github.com/ThiagoFAm/Projetos/blob/master/Arduino/Projeto%20Somador/Somador_2bits/Somador_2bits.ino). Além disso, para uma visualização interativa do projeto, clique [aqui no Tinkercad](https://www.tinkercad.com/things/iBgTi3ulpCg).
+
+## Contato
+
+Se você tiver dúvidas sobre como este projeto funciona ou precisar de mais informações, sinta-se à vontade para entrar em contato:
+
+- Instagram: [https://www.instagram.com/thiago.zipp/](https://www.instagram.com/thiago.zipp/)
+- Email: thiagoamaraldv@gmail.com
+
+Este projeto é uma excelente maneira de aprender e experimentar com eletrônica e programação usando um Arduino. Divirta-se construindo o seu somador de 2 bits!
+
+Thiago Amaral:pizza
