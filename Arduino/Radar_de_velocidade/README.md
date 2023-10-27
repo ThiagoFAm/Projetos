@@ -50,4 +50,4 @@ Se você tiver dúvidas sobre como este projeto funciona ou precisar de mais inf
 
 Este projeto oferece uma ótima oportunidade para aprender sobre sensores, eletrônica e cálculo de velocidade média. Divirta-se construindo o seu próprio radar de velocidade!
 
-Thiago Amaral:pizza
+Thiago Amaral🍕
