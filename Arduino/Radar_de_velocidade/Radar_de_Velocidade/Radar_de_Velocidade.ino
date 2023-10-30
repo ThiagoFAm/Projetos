@@ -13,8 +13,8 @@ int momento = 0;
 unsigned long tempoInicial;
 unsigned long tempoFinal;
 
-// Distância entre os sensores (em centímetros)
-float distancia = 10.0;
+// Distância entre os sensores 
+float distancia = 100; //metros
 
 void setup() {
   
@@ -59,8 +59,10 @@ void loop() {
         // tempo = deltaT | velocidade = velocidade media = S/deltaT 
         float tempo = (tempoFinal - tempoInicial) / 1000.0;
         float velocidade = distancia / tempo;
-        
+
+
         //Exibi os dados processados no lcd
+        lcd.print("m/s: ");
         lcd.print(velocidade);
         delay(4000);
         lcd.clear();
@@ -81,6 +83,7 @@ void loop() {
         float velocidade = -distancia / tempo; 
         
         //Exibi os dados processados no display
+        lcd.print("m/s: ");
         lcd.print(velocidade);
         delay(4000);
         lcd.clear();
