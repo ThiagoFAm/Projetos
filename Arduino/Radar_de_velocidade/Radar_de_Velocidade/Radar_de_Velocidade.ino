@@ -3,8 +3,8 @@
 #include <LiquidCrystal_I2C.h>
 
 //Pinos e Constantes
-#define pinLdrA A0
-#define pinLdrB A1
+#define LdrA A0
+#define LdrB A1
 #define THRESHOLD 500
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
@@ -18,8 +18,8 @@ float distancia = 100; //metros
 
 void setup() {
   
-  pinMode(pinLdrA, INPUT);
-  pinMode(pinLdrB, INPUT);
+  pinMode(LdrA, INPUT);
+  pinMode(LdrB, INPUT);
   
   lcd.init();
   lcd.backlight();
@@ -28,8 +28,8 @@ void setup() {
 
 void loop() {
   //Inicia leitura dos dados do sensor
-  int leituraLdrA = analogRead(pinLdrA);
-  int leituraLdrB = analogRead(pinLdrB);
+  int leituraLdrA = analogRead(LdrA);
+  int leituraLdrB = analogRead(LdrB);
 
   //Caso 0 define o sentido em que o movel se desloca:
   switch (momento) {
